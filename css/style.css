@@ -1,0 +1,587 @@
+
+* {
+    box-sizing: border-box;
+  }
+
+
+body{
+	margin:auto;
+  font-family: "Hiragino Kaku Gothic Pro";
+}
+
+header {
+    height: 85px;
+    width: 100%;
+    background-color: rgba(26, 23, 18, 0.9);
+    position :fixed;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header-left {
+    float: left;
+    margin-right: -25px;
+  }
+
+  .header-left a {
+    line-height: 85px;
+    padding: 0 25px;
+    margin: 0 50px;
+    color: rgb(223, 132, 132);
+    display: block;
+    float: left;
+    transition: all 0.5s;
+  }
+
+  .header-left a:hover {
+    background-color: rgba(255, 255, 255,0.4);
+  }
+  
+  .header-right {
+    float: right;
+    margin-right: -25px;
+  }
+  
+  .header-right a {
+    line-height: 85px;
+    padding: 0 25px;
+    color: rgb(200, 216, 111);
+    display: block;
+    float: left;
+    transition: all 0.5s;
+  }
+  
+  .header-right a:hover {
+    background-color: rgba(255, 255, 255,0.4);
+  }
+  
+a {
+    text-decoration: none;
+  }
+
+  main{
+    height:auto;
+    background-image: url(../image/kika.jpg);
+    background-repeat: repeat;
+    background-attachment:fixed; /*スクロールしても背景固定*/
+    background-color:rgba(255,255,255,0.5);/*以下、背景を半透明にみせる*/
+    background-blend-mode:color;
+    padding:80px 0px;
+  }
+
+  .container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  
+.main-container {
+  position: relative;
+  background-image: url(image/FrankLloydWrightface1440x640.jpg);
+  text-align:center;
+  margin-top: 100px;
+}
+
+/*タイピングアニメーションパーツ*/
+@keyframes typing { from { width: 0; } }
+@keyframes caret { 50% { border-color: transparent; } }
+
+.main-container h1{
+  position: absolute;
+  color:rgb(255, 255, 255);
+  text-align: initial;
+  top: 8%;
+  left: 160px;
+  font-family:sans-serif; 
+  /*　以下、タイピングアニメーションのためのCSS　*/
+  width: 25ch;
+  border-right: .08em solid;
+  overflow: hidden;
+  font-size: 28px;
+  white-space: nowrap;
+  animation: typing 5s steps(21, end), caret .9s step-end infinite;
+}
+
+
+.main-container p{
+  position: absolute;
+  color:rgb(255, 255, 255);
+  background-color:rgb(32, 22, 5,0.5);
+  text-align: initial;
+  top: 20%;
+  left: 140px;
+  width: 30%;
+  padding: 20px;
+  font:14px/1.8 "Hiragino Kaku Gothic Pro";
+}
+
+
+
+img {
+  width: 85%;    /* 横幅を割合で指定 */
+  height: auto;  /* 高さは自動指定 */
+}
+
+#menu {
+  height: 65px;
+  width: 100%;
+  background-color: rgba(70, 69, 69, 0.9);
+  position :fixed;
+  top: 85px;
+  z-index: 100;
+}
+
+#menu li {
+  list-style: none;
+}
+
+#menu ul {  
+  list-style: none;
+  display: flex;
+  padding-left: 120px;
+  margin: 0; 
+  margin-bottom: 40px;
+  text-align: center; 
+}
+
+#menu ul li{
+  float: left;
+  padding: 20px 25px;
+  margin: 0 50px;
+  display: inline-block;
+}
+
+#menu a {
+  text-decoration: none;
+  color:azure;
+  display: block;
+  transition: all 0.5s;
+}
+
+#menu a:hover{
+  color:rgba(194, 107, 107, 0.767) ;
+}
+
+
+/*life start*/
+
+.box {
+  display:flex;
+  flex-direction: row; /*子要素を左から右に配置*/
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 80%;
+}
+
+.text {
+  display: inline-block;
+  width: 100%;
+}
+
+.text h3 {
+  color: rgb(8,6,6);
+  font-size: 25px;
+  border-bottom:solid 2px rgba(8, 6, 6, 0.466);
+  margin-top: -200px;
+  padding-top: 200px;
+}
+
+.text p{
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+
+
+.pict {
+  margin-left: 3%;
+  overflow: visible; /*拡大時、はみ出た部分も表示*/
+  width: 40%;
+  height: auto;
+}
+
+.pict img {
+  width: 100%;
+  height:auto;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+
+.pict:hover{
+  transform: scale(1.2,1.2); /*画像の拡大率*/
+  transition-duration: 0.5s;  /*変化にかかる時間*/
+}
+
+
+.life-contents {
+  margin:200px auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:rgb(255, 255, 255,0.8);
+}
+
+/*life end*/
+
+.img{
+  width: 30%;    /* 横幅を割合で指定 */
+  height: auto;
+  margin: 30px;
+}
+
+.txt{
+  margin:10px 40px;
+}
+ 
+/*ヘッダーにかぶらないようにする*/
+#section1{
+    color: whitesmoke;
+    margin-top: -200px;
+    padding-top: 200px;
+}
+
+#section2{
+    color: whitesmoke;
+    margin-top: -200px;
+    padding-top: 200px;
+  }
+
+#section3{
+    margin-top: -200px;
+    padding-top: 200px;
+  }
+
+#section4{
+    margin-top: -200px;
+    padding-top: 200px;
+  }
+
+#section5{
+    margin-top: -200px;
+    padding-top: 200px;
+  }
+
+.color{
+  background-color: rgb(54, 77, 16);
+  color: whitesmoke;
+  font-size: 24px;
+  height: 50px;
+  padding-left: 80px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.building-contents{
+  margin:100px auto;
+  width: 1000px;
+}
+
+.buildings-container{
+    background-color: rgb(235,218,193,0.9);/*カラーをrgb指定することで透過率を設定できるようになる*/
+    color: rgb(54, 77, 16);
+    display: flex;
+    justify-content: center; /*水平方向の揃え*/
+    flex-wrap: wrap; /*折り返して上から下へ並べる*/
+    align-content: space-around; /*複数行になったときに上下均等に間隔をあけて配置*/
+    padding-top:60px;
+    padding-bottom: 60px;
+}
+
+.building{
+  text-align: center;
+  border: 1px solid rgb(143, 127, 99);
+  width: 300px;
+}
+
+.building-img{
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+    object-fit: cover; /* 画像を中央でトリミングして表示*/
+  }
+
+.buildingtxt{
+  display: inline-block;
+  width: 80%;
+}
+
+.buildingtxt-contents{
+  display: inline-block;
+  width: 80%
+}
+
+.building p{
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/*interiaスタート*/
+.interia-contents{
+  margin:100px auto;
+  width: 1000px;
+  background-color: rgba(255, 255, 255, 0.9);/*カラーをrgb指定することで透過率を設定できるようになる*/
+}
+
+.interiatxt-contents{
+  display: inline-block;
+  width: 80%
+}
+
+.interia-container{
+  color: rgb(54, 77, 16);
+  display: flex;
+  justify-content: center; /*水平方向の揃え*/
+  flex-wrap: wrap; /*折り返して上から下へ並べる*/
+  align-content: space-around; /*複数行になったときに上下均等に間隔をあけて配置*/
+  padding-top:60px;
+  padding-bottom: 60px;
+}
+
+.interia{
+  text-align: center;
+  width: 300px;
+}
+
+.interia p{
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.interia-img{
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    object-fit: cover; /* 画像を中央でトリミングして表示*/
+  }
+
+.interia-top{
+   text-align:center;
+   padding-top: 80px;
+}
+
+.interia-top p{
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.interia-top p,h2{
+  width: 92%;
+  text-align: left; 
+  padding-left: 90px;
+}
+
+.interia h3{
+  margin-top: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-bottom: solid 1px rgb(105, 104, 104);
+}
+
+.interia h3:hover{
+  opacity: 0.7;
+　color:rgb(54, 77, 16);
+}
+
+.interia-color{
+  background-color: rgb(54, 77, 16);
+  color: whitesmoke;
+  font-size: 24px;
+  height: 50px;
+  padding-left: 80px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.interia-box h2{
+    margin-top: -160px;
+    padding-top: 160px;
+}
+
+/*interiaおわり*/
+
+
+/*　★★footer はじまり★★　*/
+
+footer{
+	height:auto;
+  text-align: center;
+}
+
+footer p{
+  float:right
+  color: #777;
+  font-size:12px;
+  margin-top:0;
+  padding-left:30px;
+}
+
+/*　SNSアイコン　はじまり　*/
+
+.snsbtniti{
+  margin-bottom: 5px;
+  display:flex;
+  justify-content:center;
+}
+
+/* ボタン全体 */
+.flowbtn17{
+  border-radius:50%;
+  position:relative;
+  display:inline-block;
+  width:40px;
+  height:40px;
+  font-size:20px;
+  text-decoration:none;
+  transition:.5s;
+  background-color:#444;
+  color:#fff;
+  }
+  /* ボタンマウスホバー時のテキスト指定 */
+  .flowbtn17:hover{
+  text-decoration:none;
+  }
+  /* アイコンをど真ん中に */
+  .flowbtn17 i{
+  position:absolute;
+  top:50%;
+  left:50%;
+  -ms-transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+  }
+  /*　以下、マウスホバー時のカラー指定　*/
+  .flowbtn17.fl_tw2:hover{
+  background:linear-gradient(135deg, #13f1fc 0%,#0470dc 100%);
+  }
+
+  .flowbtn17.insta_btn2:hover{
+  background:-webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+  background:linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;		
+  }
+  
+  .flowbtn17.fl_fb2:hover{
+  background:-webkit-linear-gradient(top, #5c80c6 0%, #34528c 74%);	
+  background:linear-gradient(to bottom, #5c80c6 0%, #34528c 74%);
+  }
+  
+  .flowbtn17.fl_li2:hover{
+  background: linear-gradient(135deg, #3a9278 0%,#00c300 100%);
+  }
+ 
+  .flowbtn17.fl_ma2:hover{
+  background:linear-gradient(135deg, #fad961 0%,#f76b1c 100%);
+  }
+  ul{
+   list-style: none;
+  }
+  
+
+  /* ボタン同士の余白 */
+  .snsbtniti li{
+  flex:0 0 5%;
+  text-align:center !important;
+  }
+
+/*SNSアイコン　おわり*/
+
+/*★★footer おわり★★*/
+
+
+/*★★jQuery　ページトップリンク　はじまり★★*/
+
+#page-top a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2c2c2c;
+  border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  color: #FFF;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.6rem;
+  transition: all 0.3s;
+}
+
+#page-top{
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(100px);
+}  
+
+#page-top.UpMove{
+  animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove{
+  animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+    opacity: 1;
+  transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+  transform: translateY(100px);
+  }
+}
+
+#page-top a:hover{
+  background: #777;
+}
+
+/*★★jQuery　ページトップリンク　おわり★★*/
+
+.more:after {
+    line-height: 2.5rem;
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 40%;
+    width: 16rem;
+    font-family: FontAwesome;
+    content: '続きを読む';
+    transform: translate(-50%, 0);
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    border-radius: 20px;
+    background-color: rgba(27, 37, 56, 1);
+  }
+
+.more{
+  position: absolute;
+	z-index: 1;
+	bottom: 0;
+	width: 45%;
+	height: 140px; /* グラデーションの高さ */
+	cursor: pointer;
+	text-align: center;
+  background: linear-gradient(to bottom, rgba(250, 252, 252, 0) 0%, rgba(250, 252, 252, 0.95) 90%);
+}
+
+  
